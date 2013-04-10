@@ -4,8 +4,6 @@
         [clojure.string :only [split]])
   (:use-macros [jayq.macros :only [let-ajax]]))
 
-(def body js/document.body)
-
 (def container ($ :div#container))
 
 (defn get-url-for-item [item]
@@ -22,7 +20,6 @@
      :src (str "http://www.youtube.com/embed/" (get-youtube-id item))
      :frameborder "0"
      }]))
-
 
 (let-ajax [data 
            {:url "http://search.twitter.com/search.json?q=current%20status%20youtu.be&include_entities=true"
