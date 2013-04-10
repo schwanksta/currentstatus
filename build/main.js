@@ -24381,18 +24381,18 @@ currentstatus_fm.get_youtube_id = function get_youtube_id(item) {
 currentstatus_fm.get_youtube_embed = function get_youtube_embed(item) {
   return dommy.template.node.call(null, cljs.core.PersistentVector.fromArray(["\ufdd0'iframe", cljs.core.ObjMap.fromObject(["\ufdd0'width", "\ufdd0'height", "\ufdd0'src", "\ufdd0'frameborder"], {"\ufdd0'width":"560", "\ufdd0'height":"315", "\ufdd0'src":[cljs.core.str("http://www.youtube.com/embed/"), cljs.core.str(currentstatus_fm.get_youtube_id.call(null, item))].join(""), "\ufdd0'frameborder":"0"})], true))
 };
-var G__25173_25178 = (new cljs.core.Keyword("\ufdd0'bind")).call(null, jayq.core.ajax_m);
-var G__25174_25179 = (new cljs.core.Keyword("\ufdd0'return")).call(null, jayq.core.ajax_m);
-var G__25175_25180 = (new cljs.core.Keyword("\ufdd0'zero")).call(null, jayq.core.ajax_m);
-G__25173_25178.call(null, cljs.core.ObjMap.fromObject(["\ufdd0'url", "\ufdd0'dataType"], {"\ufdd0'url":"http://search.twitter.com/search.json?q=current%20status%20youtu.be&include_entities=true", "\ufdd0'dataType":"\ufdd0'jsonp"}), function(data) {
-  return G__25174_25179.call(null, jayq.core.append.call(null, currentstatus_fm.container, dommy.template.node.call(null, cljs.core.PersistentVector.fromArray(["\ufdd0'ul", function() {
-    var iter__2540__auto__ = function iter__25176(s__25177) {
+var G__25789_25794 = (new cljs.core.Keyword("\ufdd0'bind")).call(null, jayq.core.ajax_m);
+var G__25790_25795 = (new cljs.core.Keyword("\ufdd0'return")).call(null, jayq.core.ajax_m);
+var G__25791_25796 = (new cljs.core.Keyword("\ufdd0'zero")).call(null, jayq.core.ajax_m);
+G__25789_25794.call(null, cljs.core.ObjMap.fromObject(["\ufdd0'url", "\ufdd0'dataType"], {"\ufdd0'url":"http://search.twitter.com/search.json?q=current%20status%20youtu.be&include_entities=true", "\ufdd0'dataType":"\ufdd0'jsonp"}), function(data) {
+  return G__25790_25795.call(null, jayq.core.append.call(null, currentstatus_fm.container, dommy.template.node.call(null, cljs.core.PersistentVector.fromArray(["\ufdd0'ul", function() {
+    var iter__2540__auto__ = function iter__25792(s__25793) {
       return new cljs.core.LazySeq(null, false, function() {
-        var s__25177__$1 = s__25177;
+        var s__25793__$1 = s__25793;
         while(true) {
-          if(cljs.core.seq.call(null, s__25177__$1)) {
-            var r = cljs.core.first.call(null, s__25177__$1);
-            return cljs.core.cons.call(null, cljs.core.PersistentVector.fromArray(["\ufdd0'li", currentstatus_fm.get_youtube_embed.call(null, r)], true), iter__25176.call(null, cljs.core.rest.call(null, s__25177__$1)))
+          if(cljs.core.seq.call(null, s__25793__$1)) {
+            var r = cljs.core.first.call(null, s__25793__$1);
+            return cljs.core.cons.call(null, cljs.core.PersistentVector.fromArray(["\ufdd0'li", currentstatus_fm.get_youtube_embed.call(null, r)], true), iter__25792.call(null, cljs.core.rest.call(null, s__25793__$1)))
           }else {
             return null
           }

@@ -21,9 +21,9 @@
      :frameborder "0"
      }]))
 
-(let-ajax [data 
-           {:url "http://search.twitter.com/search.json?q=current%20status%20youtu.be&include_entities=true"
-            :dataType :jsonp}]
+(let-ajax 
+ [data {:url "http://search.twitter.com/search.json?q=current%20status%20youtu.be&include_entities=true"
+        :dataType :jsonp}]
   (append
      container
      (template/node
